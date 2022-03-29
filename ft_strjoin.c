@@ -6,12 +6,12 @@
 /*   By: rmaes <rmaes@student.codam.nl>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 16:42:11 by rmaes             #+#    #+#             */
-/*   Updated: 2021/12/17 16:42:12 by rmaes            ###   ########.fr       */
+/*   Updated: 2022/03/29 16:31:39 by rmaes            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+#include <stdlib.h>
 
 static char	*bad_input(char const *s1, char const *s2)
 {
@@ -31,9 +31,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char			*str;
 
 	if (!s1 || !s2)
-	{
 		return (bad_input(s1, s2));
-	}
 	i = 0;
 	len = ft_strlen(s1);
 	str = malloc((len + ft_strlen(s2) + 1) * sizeof(char));

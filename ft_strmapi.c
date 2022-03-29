@@ -6,10 +6,11 @@
 /*   By: rmaes <rmaes@student.codam.nl>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 16:42:18 by rmaes             #+#    #+#             */
-/*   Updated: 2021/12/17 16:42:19 by rmaes            ###   ########.fr       */
+/*   Updated: 2022/03/29 16:31:53 by rmaes            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))

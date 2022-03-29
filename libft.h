@@ -6,14 +6,13 @@
 /*   By: rmaes <rmaes@student.codam.nl>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 16:42:35 by rmaes             #+#    #+#             */
-/*   Updated: 2022/03/07 15:32:22 by rmaes            ###   ########.fr       */
+/*   Updated: 2022/03/29 16:19:20 by rmaes            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <stdlib.h>
-# include <unistd.h>
+# include <stddef.h>
 
 typedef struct s_list
 {
@@ -22,9 +21,9 @@ typedef struct s_list
 }				t_list;
 
 int				ft_atoi(const char *str);
-void			*ft_bzero(void *e, unsigned long len);
-unsigned long	ft_strlen(const char *s);
-void			*ft_calloc(unsigned long count, unsigned long size);
+void			*ft_bzero(void *e, size_t len);
+size_t			ft_strlen(const char *s);
+void			*ft_calloc(size_t count, size_t size);
 int				ft_isalnum(int c);
 int				ft_isalpha(int c);
 int				ft_isascii(int c);
@@ -41,11 +40,11 @@ t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 					void (*del)(void *));
 t_list			*ft_lstnew(void *content);
 int				ft_lstsize(t_list *lst);
-void			*ft_memchr(const void *c, int s, unsigned long n);
-int				ft_memcmp(const void *s1, const void *s2, unsigned long n);
-void			*ft_memcpy(void *dst, const void *src, unsigned long n);
-void			*ft_memmove(void *d, const void *s, unsigned long len);
-void			*ft_memset(void *e, int c, unsigned long len);
+void			*ft_memchr(const void *c, int s, size_t n);
+int				ft_memcmp(const void *s1, const void *s2, size_t n);
+void			*ft_memcpy(void *dst, const void *src, size_t n);
+void			*ft_memmove(void *d, const void *s, size_t len);
+void			*ft_memset(void *e, int c, size_t len);
 void			ft_putchar_fd(char c, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
@@ -55,16 +54,16 @@ char			*ft_strchr(const char *s, int c);
 char			*ft_strdup(const char *s1);
 void			ft_striteri(char *s, void (*f)(unsigned int, char*));
 char			*ft_strjoin(char const *s1, char const *s2);
-unsigned long	ft_strlcat(char *dst, const char *src, unsigned long size);
-unsigned long	ft_strlcpy(char *dst, const char *src, unsigned long size);
-unsigned long	ft_strlen(const char *s);
+size_t			ft_strlcat(char *dst, const char *src, size_t size);
+size_t			ft_strlcpy(char *dst, const char *src, size_t size);
+size_t			ft_strlen(const char *s);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-int				ft_strncmp(const char *s1, const char *s2, unsigned long n);
+int				ft_strncmp(const char *s1, const char *s2, size_t n);
 char			*ft_strnstr(const char *haystack,
-					const char *ndl, unsigned long len);
+					const char *ndl, size_t len);
 char			*ft_strrchr(const char *s, int c);
 char			*ft_strtrim(char const *s1, char const *set);
-char			*ft_substr(char const *s, unsigned int i, unsigned long len);
+char			*ft_substr(char const *s, unsigned int i, size_t len);
 int				ft_tolower(int c);
 int				ft_toupper(int c);
 

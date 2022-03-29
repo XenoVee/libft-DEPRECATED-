@@ -6,17 +6,17 @@
 /*   By: rmaes <rmaes@student.codam.nl>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 15:21:49 by rmaes             #+#    #+#             */
-/*   Updated: 2022/03/07 15:36:05 by rmaes            ###   ########.fr       */
+/*   Updated: 2022/03/29 16:32:41 by rmaes            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+#include <stdlib.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	unsigned long	i;
-	unsigned long	s_len;
+	size_t	i;
+	size_t	s_len;
 	char			*ret;
 
 	if (!s)

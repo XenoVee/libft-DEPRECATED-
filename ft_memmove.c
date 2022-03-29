@@ -6,14 +6,16 @@
 /*   By: rmaes <rmaes@student.codam.nl>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 16:41:51 by rmaes             #+#    #+#             */
-/*   Updated: 2022/03/21 15:22:00 by rmaes            ###   ########.fr       */
+/*   Updated: 2022/03/29 16:23:40 by rmaes            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static int	overlap_check(char *d, const char *s, unsigned long len)
+#include <stddef.h>
+
+static int	overlap_check(char *d, const char *s, size_t len)
 {
-	unsigned long	i;
-	int				overlap;
+	size_t	i;
+	int		overlap;
 
 	i = 0;
 	overlap = 0;
@@ -27,9 +29,9 @@ static int	overlap_check(char *d, const char *s, unsigned long len)
 	return (overlap);
 }
 
-void	*ft_memmove(void *d, const void *s, unsigned long len)
+void	*ft_memmove(void *d, const void *s, size_t len)
 {
-	unsigned long	i;
+	size_t	i;
 
 	if (!s && !d)
 		return (d);

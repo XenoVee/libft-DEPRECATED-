@@ -6,13 +6,15 @@
 /*   By: rmaes <rmaes@student.codam.nl>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 16:41:29 by rmaes             #+#    #+#             */
-/*   Updated: 2022/01/25 16:24:43 by rmaes            ###   ########.fr       */
+/*   Updated: 2022/03/29 16:15:54 by rmaes            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_bzero(void *e, unsigned long len)
+#include "libft.h"
+
+void	*ft_bzero(void *e, size_t len)
 {
-	unsigned long	a;
+	size_t	a;
 
 	a = 0;
 	while (a < len)

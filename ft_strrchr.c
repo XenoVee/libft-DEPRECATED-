@@ -6,11 +6,9 @@
 /*   By: rmaes <rmaes@student.codam.nl>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 16:42:25 by rmaes             #+#    #+#             */
-/*   Updated: 2022/03/21 15:23:03 by rmaes            ###   ########.fr       */
+/*   Updated: 2022/03/29 16:32:31 by rmaes            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

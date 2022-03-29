@@ -6,11 +6,11 @@
 /*   By: rmaes <rmaes@student.codam.nl>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 16:41:58 by rmaes             #+#    #+#             */
-/*   Updated: 2021/12/17 16:41:59 by rmaes            ###   ########.fr       */
+/*   Updated: 2022/03/29 16:24:13 by rmaes            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
 
 void	ft_putnbr_fd(int n, int fd)
 {

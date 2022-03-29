@@ -6,13 +6,15 @@
 /*   By: rmaes <rmaes@student.codam.nl>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 16:42:19 by rmaes             #+#    #+#             */
-/*   Updated: 2022/03/21 15:24:34 by rmaes            ###   ########.fr       */
+/*   Updated: 2022/03/29 16:32:12 by rmaes            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(const char *s1, const char *s2, unsigned long n)
+#include <stddef.h>
+
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned long	i;
+	size_t	i;
 
 	i = 0;
 	if (n == 0)

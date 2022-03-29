@@ -6,23 +6,30 @@
 /*   By: rmaes <rmaes@student.codam.nl>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 16:42:00 by rmaes             #+#    #+#             */
-/*   Updated: 2022/03/11 15:45:46 by rmaes            ###   ########.fr       */
+/*   Updated: 2022/03/29 16:25:59 by rmaes            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
 #include "libft.h"
+
+// void	ft_putstr_fd(char *s, int fd)
+// {
+// 	int	i;
+
+// 	i = 0;
+// 	if (s)
+// 	{
+// 		while (s[i])
+// 		{
+// 			write(fd, &s[i], 1);
+// 			i++;
+// 		}
+// 	}
+// }
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int	i;
-
-	i = 0;
 	if (s)
-	{
-		while (s[i])
-		{
-			write(fd, &s[i], 1);
-			i++;
-		}
-	}
+		write(fd, s, ft_strlen(s));
 }

@@ -6,14 +6,16 @@
 /*   By: rmaes <rmaes@student.codam.nl>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 16:42:14 by rmaes             #+#    #+#             */
-/*   Updated: 2021/12/17 16:42:15 by rmaes            ###   ########.fr       */
+/*   Updated: 2022/03/29 16:16:31 by rmaes            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned long	ft_strlcpy(char *dst, const char *src, unsigned long size)
+#include "libft.h"
+
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	unsigned long	i;
-	unsigned long	c;
+	size_t	i;
+	size_t	c;
 
 	i = 0;
 	c = 0;

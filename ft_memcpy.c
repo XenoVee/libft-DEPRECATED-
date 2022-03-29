@@ -6,15 +6,17 @@
 /*   By: rmaes <rmaes@student.codam.nl>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 16:41:49 by rmaes             #+#    #+#             */
-/*   Updated: 2021/12/17 16:41:49 by rmaes            ###   ########.fr       */
+/*   Updated: 2022/03/29 16:23:32 by rmaes            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void *dst, const void *src, unsigned long n)
+#include <stddef.h>
+
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	unsigned long	a;
-	char			*dsttemp;
-	const char		*srctemp;
+	size_t		a;
+	char		*dsttemp;
+	const char	*srctemp;
 
 	srctemp = src;
 	dsttemp = dst;

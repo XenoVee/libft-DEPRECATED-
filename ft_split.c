@@ -6,11 +6,12 @@
 /*   By: rmaes <rmaes@student.codam.nl>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 16:42:02 by rmaes             #+#    #+#             */
-/*   Updated: 2022/03/24 15:53:21 by rmaes            ###   ########.fr       */
+/*   Updated: 2022/03/29 16:27:17 by rmaes            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 static int	word_count(char const *s, char c)
 {

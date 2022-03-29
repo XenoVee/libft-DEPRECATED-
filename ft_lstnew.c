@@ -6,11 +6,12 @@
 /*   By: rmaes <rmaes@student.codam.nl>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 16:41:44 by rmaes             #+#    #+#             */
-/*   Updated: 2021/12/17 16:41:44 by rmaes            ###   ########.fr       */
+/*   Updated: 2022/03/29 16:35:38 by rmaes            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 t_list	*ft_lstnew(void *content)
 {

@@ -6,14 +6,16 @@
 /*   By: rmaes <rmaes@student.codam.nl>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 16:41:52 by rmaes             #+#    #+#             */
-/*   Updated: 2021/12/17 16:41:53 by rmaes            ###   ########.fr       */
+/*   Updated: 2022/03/29 16:23:45 by rmaes            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memset(void *e, int c, unsigned long len)
+#include <stddef.h>
+
+void	*ft_memset(void *e, int c, size_t len)
 {
-	unsigned long	a;
-	char			*b;
+	size_t	a;
+	char	*b;
 
 	b = e;
 	a = 0;

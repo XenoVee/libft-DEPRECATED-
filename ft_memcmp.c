@@ -6,15 +6,17 @@
 /*   By: rmaes <rmaes@student.codam.nl>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 16:41:48 by rmaes             #+#    #+#             */
-/*   Updated: 2021/12/17 16:41:48 by rmaes            ###   ########.fr       */
+/*   Updated: 2022/03/29 16:23:25 by rmaes            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_memcmp(const void *s1, const void *s2, unsigned long n)
+#include <stddef.h>
+
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned long			i;
-	const unsigned char		*d1;
-	const unsigned char		*d2;
+	size_t				i;
+	const unsigned char	*d1;
+	const unsigned char	*d2;
 
 	if (n == 0)
 		return (0);

@@ -6,11 +6,12 @@
 /*   By: rmaes <rmaes@student.codam.nl>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 16:41:37 by rmaes             #+#    #+#             */
-/*   Updated: 2022/03/21 15:20:59 by rmaes            ###   ########.fr       */
+/*   Updated: 2022/03/29 16:20:53 by rmaes            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 static int	digitcount(int n)
 {
