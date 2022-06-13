@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: rmaes <rmaes@student.codam.nl>             +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/06/13 17:19:52 by rmaes             #+#    #+#              #
+#    Updated: 2022/06/13 17:19:57 by rmaes            ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 SOURCES = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
 		ft_isascii.c ft_isdigit.c ft_isprint.c ft_itoa.c ft_memchr.c \
 		ft_memcmp.c ft_memcpy.c ft_memmove.c ft_memset.c ft_putchar_fd.c \
