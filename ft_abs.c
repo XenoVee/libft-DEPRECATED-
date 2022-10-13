@@ -1,30 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_is_atoi.c                                       :+:    :+:            */
+/*   ft_abs.c                                           :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: rmaes <rmaes@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/13 15:57:51 by rmaes         #+#    #+#                 */
-/*   Updated: 2022/10/13 16:09:14 by rmaes         ########   odam.nl         */
+/*   Created: 2022/10/13 16:28:38 by rmaes         #+#    #+#                 */
+/*   Updated: 2022/10/13 16:30:03 by rmaes         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_is_atoi(char *s)
+int	ft_abs(int n)
 {
-	int	i;
-
-	i = 0;
-	while ((s[i] >= 9 && s[i] <= 13) || s[i] == 32)
-		i++;
-	if (s[i] == '-' || s[1] == '+')
-		i++;
-	while (s[i])
-	{
-		if (ft_isdigit(s[i]) == 0)
-			return (0);
-	}
-	return (1);
+	if (n < 0)
+		return (-n);
+	return (n);
 }
