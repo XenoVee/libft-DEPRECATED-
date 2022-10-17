@@ -6,7 +6,7 @@
 #    By: rmaes <rmaes@student.codam.nl>               +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/06/13 17:19:52 by rmaes         #+#    #+#                  #
-#    Updated: 2022/10/13 18:53:38 by rmaes         ########   odam.nl          #
+#    Updated: 2022/10/17 16:36:06 by rmaes         ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,11 @@ OBJECTS = $(SOURCES:.c=.o)
 BONUS_SOURCES = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
 				ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 BONUS_OBJECTS = $(BONUS_SOURCES:.c=.o)
+PRINTF_FILES = ft_printf_utils.c ft_printf.c writes.c writes_2.c
+PRINTF_DIR = ft_printf/
+PRINTF_SOURCES = $(addprefix $(PRINTF_DIR), $(PRINTF_FILES))
+PRINTF_OBJECTS = $(PRINTF_SOURCES:.c=.o)
+PRINTF_HEADER = $(addprefix $(PRINTF_DIR), ft_printf.h)
 HEADER = libft.h
 CFLAGS = -Wall -Wextra -Werror
 CC = gcc
@@ -33,16 +38,18 @@ all: $(NAME)
 $(TEST): $(NAME) $(SOURCES_TEST)
 	$(CC) -g -o $@ $^
 
-$(NAME): $(OBJECTS) $(HEADER)
+$(NAME): $(OBJECTS) $(PRINTF_OBJECTS) $(HEADER) $(PRINTF_HEADER)
 	@echo archving $@
-	@ar -rcsu $@ $^
+	ar -rcsu $@ $^
 
 %.o: %.c
-	@echo compiling $^
+	@$(CC) -c $(CFLAGS) -o $@ $^
+
+$(PRINTF_DIR)%.o: $(PRINTF_DIR)%.c
 	@$(CC) -c $(CFLAGS) -o $@ $^
 
 clean:
-	@rm -f $(OBJECTS) $(BONUS_OBJECTS)
+	@rm -f $(OBJECTS) $(BONUS_OBJECTS) $(PRINTF_OBJECTS)
 
 fclean: clean
 	@rm -f $(NAME)
@@ -51,6 +58,6 @@ re: fclean all
 
 bonus: $(BONUS_OBJECTS) $(OBJECTS) $(HEADER) $(NAME)
 	@echo "adding bonus to $(NAME)"
-	@ar -rcsu $(NAME) $(OBJECTS) $(BONUS_OBJECTS)
+	@ar -rcsu $(NAME) $(OBJECTS)  $(BONUS_OBJECTS) 
 
 .PHONY: all clean fclean re bonus
